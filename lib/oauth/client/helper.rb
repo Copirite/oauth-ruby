@@ -19,8 +19,7 @@ module OAuth::Client
     end
 
     def nonce
-      # options[:nonce] ||= generate_key
-      generate_key # generate key every time
+      options[:nonce] = generate_key
     end
 
     def timestamp
